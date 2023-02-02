@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "1128b584-4146-4c20-a68c-8947b314af00": {
+      "ProjectGuid": "1128b584-4146-4c20-a68c-8947b314af00",
+      "DisplayName": "KMP算法",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
