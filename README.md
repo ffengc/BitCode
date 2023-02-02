@@ -1,2 +1,2 @@
 # BitCode
-Learn In Bit
+## the code is from bit
