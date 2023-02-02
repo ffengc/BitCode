@@ -1,450 +1,389 @@
 #define _CRT_SECURE_NO_WARNINGS 1
+//0709_bit_Cpp_introduction2
 
 #include<iostream>
 #include<algorithm>
 #include<string>
 #include<vector>
-
-//using namespace std;
-
-//一般来说std不要完全展开
-//建议
-//1.项目中，尽量不要用using namespace std;
-//2.日常练习中用using namespace std;
-//3.项目中，可以指定命名空间访问+展开常用的
-
-#if 0
-using std::cout;
-using std::endl;
-int main() {
-	//像这种，指定一次vector，里面的函数就不用指定了
-	std::vector<int>v;
-	v.push_back(1);
-	v.push_back(2);
-	v.push_back(3);
-	v.push_back(4);
-
-	//下面这些要重复写，我们就展开常用的
-	cout << "hello world!" << endl;
-	cout << "hello world!" << endl;
-	cout << "hello world!" << endl;
-
-	return 0;
-}
-#endif
-
-
-
-//C++的输入和输出
 using namespace std;
+
+//返回引用 -- 可以修改返回的对象
+
+//传值返回和传引用返回的性能对比
 #if 0
-int main() {
-	int i;
-	double d;
-	cin >> i >> d;
-	cout << i << " " << d << endl;
-	cout << "hello world" << endl;
-	char arr[] = "hello bit";
-	cout << arr << endl;
-	//C语言的东西可以继续用的
-	//如果想要控制输出的格式，只输出小数点后几位，等这些
-	//直接用printf就好
-	return 0;
-}
-//这里可以自动识别类型
-#endif
-
-
-#if 0
-//缺省参数
-void Func(int a = 0) {
-	cout << a << endl;
-}
-int main() {
-	Func(1);
-	Func(2);
-	Func();//不传参数的时候，缺省参数起作用，如果传了参数，缺省参数就不起作用
-	return 0;
-}
-
-
-//全缺省参数和半缺省参数
-void TestFunc1(int a = 10, int b = 20, int c = 30)
+#include <ctime>
+struct A { int a[10000]; };
+A a;
+// 值返回
+A TestFunc1() { return a; }
+// 引用返回
+A& TestFunc2() { return a; }
+void TestReturnByRefOrValue()
 {
-	cout << "a = " << a << endl;
-	cout << "b = " << b << endl;
-	cout << "c = " << c << endl;
+	// 以值作为函数的返回值类型
+	size_t begin1 = clock();
+	for (size_t i = 0; i < 100000; ++i)
+		TestFunc1();
+	size_t end1 = clock();
+	// 以引用作为函数的返回值类型
+	size_t begin2 = clock();
+	for (size_t i = 0; i < 100000; ++i)
+		TestFunc2();
+	size_t end2 = clock();
+	// 计算两个函数运算完成之后的时间
+	cout << "TestFunc1 time:" << end1 - begin1 << endl;
+	cout << "TestFunc2 time:" << end2 - begin2 << endl;
 }
-void TestFunc2(int a, int b = 10, int c = 20)
-{
-	cout << "a = " << a << endl;
-	cout << "b = " << b << endl;
-	cout << "c = " << c << endl;
-}
-//缺省只能从左往右
-//void F(int a = 10, int b, int c);//不行
-void F(int a, int b = 10, int c = 10);
-//void F(int a = 10, int b, int c = 10);//不行
-
-
 int main() {
-	TestFunc1();
-	TestFunc1(1);
-	TestFunc1(1, 2);//传的参数是从左往右给的
-	TestFunc1(1, 2, 3);
-
-	//TestFunc2();
-	TestFunc2(1);
-	TestFunc2(1, 2);//传的参数是从左往右给的
-	TestFunc2(1, 2, 3);
+	TestReturnByRefOrValue();
 	return 0;
 }
 #endif
 
+
+//const引用
 #if 0
-//怎么用呢
-struct Stack {
-	int* _a;
-	int _top;
-	int _capacity;
-};
-void StackInit(struct Stack* ps, int capacity = 4) {
-	ps->_a = (int*)malloc(sizeof(int) * capacity);
+int main() {
+	int a = 10;
+	int& b = a;//这里是权限平移
+	cout << typeid(a).name() << endl;
+	cout << typeid(b).name() << endl;
+	const int c = 20;
+	//int& d = c;//err
+	//d不能是c的别名 -- 因为c不能改
+	//这一句出现了权限的放大，是不允许的
+	cout << typeid(c).name() << endl;
+	//C++可以打印变量类型
+
+	int e = 30;
+	const int& f = e;//权限的缩小
+
+	//隐式类型的转换
+	int ii = 1;
+	double dd = ii;// -- 其实都是会开一个临时变量
+	//double& rdd = ii;//错误的
+	const double& rdd = ii;//正确的
+	//类型转换中间会产生临时变量
+	//而这个临时变量具有常性
+	//所以不加const的时候其实临时变量和目标变量有权限放大
+	//加了const其实只是权限平移
+
+	//const也可以做常量的别名
+	const int& x = 10;//
+	//所以我们以后用了引用就尽量用const -- 不然可能会引发很多问题
+	return 0;
+}
+//强转不会改变原变量的类型
+#endif
+
+
+
+#if 0
+void func1(int n)
+{}
+void func2(int& n)
+{}
+int main() {
+	int a = 10;
+	const int b = 20;
+	func1(a);
+	func1(b);
+	func1(30);
+	//注意：权限放大只针对引用，因为引用本质是同一块空间
+	//但是这里传参是拷贝，不存在权限的问题
+
+	func2(a);
+	//func2(b);
+	//func2(30);//err
+	//在func2()里加个const后面两个就能传过去了
+	return 0;
+}
+#endif
+/* 总结：const具有很强的接收度
+* 如果使用引用传参，函数内如果不改变n，那么建议用const引用传参
+*/
+
+
+
+//引用和指针
+#if 0
+int main()
+{
+	int a = 10;
+	int& ra = a;
+
+	cout << "&a = " << &a << endl;
+	cout << "&ra = " << &ra << endl;
+	return 0;
+}
+//指针更强大，更危险，更危险
+//应用相对局限一些，更安全，更简单
+
+
+//在语法角度：引用没有开空间，指针开了4或者8
+//我们打开汇编，可以发现，两种方式的汇编代码是一样的
+//所以引用的底层就是指针
+int main() {
+	//
+	int a = 10;
+	int& ra = a;
+	ra = 20;
+	//
+	int* pa = &a;
+	*pa = 20;
+
+	return 0;
+}
+#endif
+//相当于引用是指针的封装
+//我们用的时候，就想引用就是换个名字 -- 这去想取用才是最好的
+
+
+//C++为什么支持函数重载
+//Linux 7_19_cpp里演示
+//安装g++指令
+//yum install gcc-c++ libstdc++-devel
+
+//预处理+编译+汇编+链接
+//预处理：头文件展开，宏替换，条件编译，去掉注释
+//生成：func.i test.i
+
+//编译：语法检查，生成汇编代码
+//生成：func.s test.s
+
+//汇编：把汇编代码转换二进制机器码
+//生成：func.o test.o -- 两个func都有汇编代码
+
+//链接
+//a.out(linux)  
+//xxx.exe(windows)
+
+//链接的时候怎么找声明的定义
+//call func (?)里面是地址
+//地址在哪找，在定义里面
+//所以链接阶段找
+//怎么找
+//一开始会生成符号表
+//
+//问题就出在符号表了
+//无法分清函数
+//因为函数名相同，生成的符号叫一样
+
+//那么g++编译的时候，生成符号表的时候，会有一个函数名修饰规则
+//readelf test.o -s
+//readelf func.o -s 可以看符号表
+//符号表里面对func函数的修饰
+//_Z4funcid
+//_Z4funcii
+// 4代表函数名的长度，id代表参数类型的首字母（ii同理）
+//这样就不会冲突了
+
+//总结：为什么cpp支持函数重载 -- 函数名修饰规则 -- 参数不同，修饰出来名字就不同了
+
+
+//C++怎么调用C
+//C++程序    C++库
+//C程序      C库
+//如果交叉调用呢？
+//可以的 -- 但是需要做一些处理
+//C++编译器认识C的规则
+//C编译器不认识C的规则
+// 
+
+//C++调用C的库
+//如果我们用C写了一个静态库(.lib)，现在需要在C++编译器里面用(静态库包括了Stack.c里面的一些函数定义)
+//我们是用不了的，因为C生成的.lib文件的符号规则和C++不同
+//我们extern "C" 即可
+extern "C" {
+#include"Stack.h"
+}
+//这里的extern "C"的作用其实就是告诉C++编译器这里面的声明的实现，使用C实现的
+//等下用C的规则去链接查找它们
+
+
+//C调用C++库
+//操作和上面一样
+//和上面不一样的点是，这次C程序不变了，因为C不可能认识C++
+//我们只能改库
+//在.h文件里面给函数接口声明弄上extern "C"，把接口都包起来
+//但是这样其实会出现问题，因为.h会在.c文件里面展开，但是.c文件里面不支持extern "C"因为C++才支持这个玩意儿
+//所以我们要弄一个C++标识宏 -- 让生成符号表的时候（Cpp编译器）有extern "C"，即用C的规则生成.lib文件
+//但是要在.c里面不展开，因为.c看不懂extern "C"
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+	//...接口声明
 	//...
-	ps->_top = 0;
-	ps->_capacity = capacity;
+#ifdef __cplusplus
 }
+#endif
+//这样弄的话，cpp里面有extern "C"，c里面就没有了
+
+
+//内联函数
+/*
+* 以inline修饰的函数叫做内联函数，编译时C++编译器会调用内联函数的地方
+* 展开，没有函数压栈的开销，内联函数提升程序运行的效率
+*/
+//1.短小的函数
+//2.频繁的调用（如10万次）
+//场景：堆排和快排的swap函数
+
+//C: 宏函数
+//C++: inline
+
+//ADD的宏函数
+#if 0
+#define ADD(X,Y)((X)+(Y))
 int main() {
-	//如果知道一定会插入100个数据，就可以显示传参数100
-	//这样提前开好空间，这样插入数据就可以避免扩容，扩容是有代价的
-	struct Stack st1;
-	StackInit(&st1, 100);
-
-	//如果不知道就不传-直接缺省-用默认的4
-	struct Stack st2;
-	StackInit(&st2);
-
+	int a = 10+1;
+	int b = 15;
+	int ret = ADD(a, b);
+	cout << ret << endl;
 	return 0;
 }
-
-//缺省参数不能在声明和定义同时出现
-//一般是声明给，定义不给
-//一般是按照声明为准的
 #endif
 
-
-//函数重载
-//一个函数有多个意思
-//C语言是不允许重名函数存在的
-//C++可以
-//1.同名函数一定要在同一个作用域里作用
-//2.这些同名函数的形参列表（参数个数 或者类型 顺序）必须不同
-///常常用来处理实现功能类似数据类型不同的函数
 #if 0
-int Add(int left, int right)
-{
-		return left + right;
+inline int Add(int a, int b) {
+	return a + b;
 }
-double Add(double left, double right)
-{
-	return left + right;
+int main() {
+	int a = 10;
+	int b = 20;
+	cout << Add(a, b) << endl;
+	return 0;
 }
-long Add(long left, long right)
+#endif
+//inline 符合条件的情况下，在调用的地方展开
+//C++中基本不再建议使用宏
+//《effective C++》中一个条款：尽量用const enum inline去替代宏
+
+//关于inline
+/*
+* 1.inline是一种以空间换时间的做法，省去调用函数的开销。
+*   所以当代码很长或者有循环/递归的函数不适合使用作为内联函数
+* 2.inline对于编译器而言只是一个建议。编译器会自动优化
+*   如果定义为inline的函数体内有递归，或函数比较长等等，编译器优化时会忽略掉内联
+* 3.inline不建议声明和定义分离，分离会导致链接错误，因为inline被展开，就没有函数地址了，链接就会找不到 -- 内联我直接不放到符号表里了
+*/
+
+
+//auto 自动推导变量
+#if 0
+int TestAuto()
 {
-	return left + right;
+	return 10;
 }
 int main()
 {
-	cout << Add(10, 20) << endl;
-	cout << Add(10.0, 20.0) << endl;
-	cout << Add(10L, 20L) << endl;
+	int a = 10;
+	auto b = a;
+	auto c = 'a';
+	auto d = TestAuto();
+
+	cout << typeid(b).name() << endl;
+	cout << typeid(c).name() << endl;
+	cout << typeid(d).name() << endl;
+
+	//auto e; 无法通过编译，使用auto定义变量时必须对其进行初始化
 	return 0;
 }
 #endif
 
-//函数重载对C++意义重大
 #if 0
 int main() {
-	int a = 1;
-	int b = 2;
-
-	double c = 1.1;
-	double d = 2.2;
-
-	swap(a, b);
-	swap(c, d);
-
-	cout << a;//其实自动识别类型-就是函数重载支持的
-	cout << c;
+	int a[] = { 1,2,3,4,5,6 };
+	//现在要遍历a这个数组
+	for (int i = 0; i < sizeof(a) / sizeof(int); ++i) {
+		cout << a[i] << " ";
+	}
+	cout << endl;
+	//现在
+	//范围for
+	//自动取a的数据赋值给e
+	//自动迭代，自动判断结束
+	for (auto e : a) {
+		cout << e << " ";
+	}
+	cout << endl;
 	return 0;
 }
 #endif
-//为什么C++支持函数重载，为什么C不支持
-//C++如何调用C？
-//大命题：函数重载的底层原理
 
-
-//引用
-//就是给变量取别名
+#include<map>
 #if 0
 int main() {
-	int a = 0;
-	int& b = a;//这里是引用
-	cout << &b << endl;//这里是取地址
-	cout << &a << endl;
-	//发现地址是一样的
-	a++;
-	cout << a << " " << b << endl;
+	std::map<std::string, std::string>dict;
+	std::map<std::string, std::string>::iterator it = dict.begin();
+	auto it = dict.begin();//上面这行可以用auto优化成这个样子
+	//类型比较长的时候，可以用auto来简化
 	return 0;
 }
 #endif
 
 
-
-//引用特性
-//1.引用在定义的时候一定要初始化
-//2.一个变量可以有多个引用
-//3.如果引用给了一个实体，就不能给另外一个实体了
+//auto和指针结合使用
 #if 0
 int main() {
-	//1.
-	int a = 1;
-	//int& b;  //err
-	//2.
-	int& b = a;
-	int& c = a;
-	int& d = c;
-	cout << a << " " << b << " " << c << endl;
-	++a;
-	cout << a << " " << b << " " << c << endl;
-	//3.
-	//这里和指针是不一样的，指针可以随时改变，一会儿指向它一会儿指向它
+
 	int x = 10;
-	b = x;//b是x的别名呢？还是x赋值给b呢？---这里是赋值
-	cout << a << " " << b << " " << c << endl;
+	auto a = &x;//int*
+	auto* b = &x;//强调一定要传指针
+	auto& c = x;//强调c是一个引用
+	cout << typeid(a).name() << endl;
+	cout << typeid(b).name() << endl;
+	cout << typeid(c).name() << endl;
+
+	*b = 30;
+	c = 40;
 	return 0;
+
 }
 #endif
 
-//引用的应用场景
-//1.做参数 -- 输出型参数
+//现在再举一个刚才数组的例子，我想通过范围for来修改数组的值怎么办
 #if 0
-void _swap(int& r1, int& r2) {
-	int tmp = r1;
-	r1 = r2;
-	r2 = tmp;
-}void _swap_ptr(int* r1, int* r2) {
-	int tmp = *r1;
-	*r1 = *r2;
-	*r2 = tmp;
-}
-
-//vector
-typedef struct SeqList {
-	//...
-}SL;
-void SLPushBack(SL& s, int x)//引用
-{}
-#endif
-
-//forwardList
-#if 0
-typedef struct SListNode {
-	//...
-}SLTNode;
-void SListPushBack(SLTNode** pphead, int x) {}//指针版本
-void SListPushBack(SLTNode*& pphead, int x) {}//引用版本
-#endif
-
-//再改进
-#if 0
-typedef struct SListNode {
-	//...
-}SLTNode,*PSLTNode;//这里其实把指针略去了，其实这个优化其实达不到优化的效果，复杂化了问题
-void SListPushBack(PSLTNode& phead, int x) {//phead其实就是list的别名，phead改变其实list也会改变
-	if (phead == NULL) {
-		phead = (SLTNode*)malloc(sizeof(SLTNode));
-		//...
-	}
-}
-//这些我们也要看懂！
-//刚才那个typedef底下的*PSLTNode其实就是
-typedef struct SListNode* PSLTNode;//其实是一个道理
-
-int main() {
-	int a = 0, b = 2;
-	cout << a << " " << b << endl;
-	_swap_ptr(&a, &b);
-	cout << a << " " << b << endl;
-	_swap(a, b);
-	cout << a << " " << b << endl;
-	//
-	SL s;
-	SLPushBack(s, 1);
-	SLPushBack(s, 2);
-	SLPushBack(s, 3);
-	//
-	SLTNode* list = NULL;
-	SListPushBack(list, 1);
-	SListPushBack(list, 2);
-	SListPushBack(list, 3);
-
-	return 0;
-}
-#endif
-
-
-//引用
-//2.大对象传参，提高效率
-//现在先认为，引用是不开空间的
-#if 0
-#include <ctime>
-struct A {
-	int arr[10000];
-};
-void TestFunc1(A a) {}
-void TestFunc2(A& a) {}
-void TestRefAndValue()
-{
-	A a;
-	// 以值作为函数参数
-	size_t begin1 = clock();
-	for (size_t i = 0; i < 1000000; ++i)//传多次
-		TestFunc1(a);
-	size_t end1 = clock();
-
-	// 以引用作为函数参数
-	size_t begin2 = clock();
-	for (size_t i = 0; i < 1000000; ++i)
-		TestFunc2(a);
-	size_t end2 = clock();
-
-	// 分别计算两个函数运行结束后的时间
-	cout << "TestFunc1(A)-time:" << end1 - begin1 << endl;
-	cout << "TestFunc2(A&)-time:" << end2 - begin2 << endl;
-}
-int main() {
-	TestRefAndValue();
-	return 0;
-}
-#endif 
-//现在先不要关心底层是怎么实现的
-
-
-
-
-
-//引用
-//3.返回值
-#if 0
-int Count1() {
-	//int n = 0;
-	static int n = 0;
-	n++;
-	//...
-	return n;
-}
-//上面用传值返回的时候，n其实不是返回值，是要拷贝一个新的
-//所以会压栈 -- 在函数的栈帧和销毁那里有讲 -- 小的话用寄存器，大的话会提前开好空间
-//为什么传值返回要这样做呢
-//因为函数Count1的栈帧是要销毁的
-//所以无论n是在静态区还是在栈里面，操作系统都要拷贝好，因为是传值返回
-//所以只要是传值返回
-//都会生成一个返回对象拷贝作为函数调用的返回值
-
-//传引用返回
-int& Count2() {
-	int n = 1;
-	//static int n = 0;
-	n++;
-	//...
-	return n;
-}
-int main() {
-	int& ret = Count2();
-	//如果这样写，ret其实就是n，函数结束之后，ret其实没了
-	//这样写和int ret= Count2(); 是不一样的
-	//
-	printf("%d\n", ret);
-// -- 此时ret的结果是未定义的，如果栈帧结束时，系统会清理栈帧，置成随机值
-//那么这里ret应该是随机值
-//这里侥幸刚好是1
-	printf("%d\n", ret);
-	cout << ret << endl;//打印第二次的时候其实就是随机值了 -- 而且调printf和cout的结果不一样
-	cout << ret << endl;
-	//如果不用static其实是越界了
-	//但是越界!=报错
-	//为什么这里不报错呢 -- 源于一个侥幸
-
-	//后面这些全越界了
-	ret = 10;
-	*(&ret + 1) = 20;
-	*(&ret + 2) = 30;
-	for (int i = 0; i < 100; i++) {//这里数量少的时候编译器发现不了，循环多一点编译器就报错了
-		*(&ret + i) = i;
-	}
-	return 0;
-}
-#endif
-//总结：
-/*
-* 出了函数作用，返回对象就销毁了 -- 那么一定不能用引用返回，一定要用传值返回
-* 如果用一个static就可以用了
-*/
-
-//引用返回的场景
-#include<cassert>
-typedef struct SeqList {
-	int* a;
-	int size;
-	int capacity;
-}SL;
-void SLInit(SL& s, int capacity = 4) {
-	s.a = (int*)malloc(sizeof(int) * capacity);
-	assert(s.a);
-	//...
-	s.size = 0;
-	s.capacity = capacity;
-}
-void SLPushBack(SL& s, int x) {
-	if (s.size == s.capacity) {
-		//...
-	}
-	s.a[s.size++] = x;
-}
-//现在需要一个修改顺序表数据的接口
-void SLModify(SL& s, int pos, int x);//以前的版本 -- 不爽
-int& SLAt(SL& s, int pos) {
-	assert(pos >= 0 && pos <= s.size);
-	return s.a[pos];
-}
-int main() {
-	SL sl;
-	SLInit(sl);
-	SLPushBack(sl, 1);
-	SLPushBack(sl, 2);
-	SLPushBack(sl, 3);
-	for (int i = 0; i < sl.size; i++) {
-		cout << SLAt(sl, i) << " ";
+void print_arr(int* arr, int sz) {
+	for (int i = 0; i < sz; i++) {
+		cout << arr[i] << " ";
 	}
 	cout << endl;
-	//修改
-	//因为返回值是引用，所以可以直接获取顺序表里面的值
-	SLAt(sl, 0)++;
-	//再打印
-	for (int i = 0; i < sl.size; i++) {
-		cout << SLAt(sl, i) << " ";
+}
+int main() {
+	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
+#if 0
+	for (auto e : arr) {
+		e--;
 	}
-	cout << endl;
-	//再改
-	SLAt(sl, 0) = 10;
-	//再打印
-	for (int i = 0; i < sl.size; i++) {
-		cout << SLAt(sl, i) << " ";
+#endif
+	for (auto& e : arr) {
+		e--;
 	}
-	cout << endl;
+	//这样肯定是没有效果的,因为e是arr[]的一个拷贝，但是我改成引用就不同了，引用就不是拷贝了
+	print_arr(arr,sizeof(arr)/sizeof(int));
 	return 0;
 }
-//这样我们改的就很爽
-//这个SLAt接口其实就像数组的[]一样，可写可改
-//只要我们return的东西在堆上面，我们直接用引用返回得了
+#endif
+
+//auto不能作为函数的参数
+//auto不能用来声明数组s
+
+
+
+//NULL的问题
+void f(int) {
+	cout << "f(int)" << endl;
+}
+void f(int*) {
+	cout << "f(int*)" << endl;
+}
+int main() {
+	int* p = NULL;
+	f(0);
+	f(NULL);//我们发现NULL其实去调用第一个了，因为在cpp中NULL被定义成0了
+	f(p);
+	return 0;
+}
+//nullptr补C++的坑，不是补C语言的坑，以后都用nullptr就行
