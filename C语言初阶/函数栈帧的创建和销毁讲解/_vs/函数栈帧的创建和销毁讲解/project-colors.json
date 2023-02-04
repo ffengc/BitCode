@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "ac1a4d6e-cfc4-4124-9d7b-3dc8e68f2041": {
+      "ProjectGuid": "ac1a4d6e-cfc4-4124-9d7b-3dc8e68f2041",
+      "DisplayName": "函数栈帧的创建和销毁讲解",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "杂项文件",
+      "ColorIndex": -1
+    },
+    "a7a2a36c-3c53-4ccb-b52e-425623e2dda5": {
+      "ProjectGuid": "a7a2a36c-3c53-4ccb-b52e-425623e2dda5",
+      "DisplayName": "杂项文件",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
