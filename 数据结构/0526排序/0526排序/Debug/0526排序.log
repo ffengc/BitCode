@@ -1,0 +1,3 @@
+﻿  test.cpp
+D:\比特就业课105期\数据结构\0526排序\0526排序\test.cpp(9,12): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+  0526排序.vcxproj -> D:\比特就业课105期\数据结构\0526排序\Debug\0526排序.exe

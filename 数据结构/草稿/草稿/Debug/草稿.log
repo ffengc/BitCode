@@ -1,0 +1,3 @@
+﻿  源.cpp
+D:\比特就业课105期\数据结构\草稿\草稿\源.cpp(5,12): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+  草稿.vcxproj -> D:\比特就业课105期\数据结构\草稿\Debug\草稿.exe

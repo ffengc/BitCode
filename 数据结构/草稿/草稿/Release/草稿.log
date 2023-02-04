@@ -1,0 +1,2 @@
+﻿  源.cpp
+D:\比特就业课105期\数据结构\草稿\草稿\源.cpp(5,2): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
