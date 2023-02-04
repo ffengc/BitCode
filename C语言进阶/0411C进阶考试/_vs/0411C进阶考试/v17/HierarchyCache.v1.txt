@@ -1,0 +1,171 @@
+﻿++解决方案“0411C进阶考试”‎(1 个项目/共 1 个)
+i:{00000000-0000-0000-0000-000000000000}:0411C进阶考试.sln
+++0411C进阶考试
+i:{00000000-0000-0000-0000-000000000000}:0411C进阶考试
+++引用
+i:{7d0d9fc5-ba44-46a8-a5a8-f32d091032ad}:{5B0140FC-AECA-48A2-9C43-F5F58A885259}
+++外部依赖项
+i:{7d0d9fc5-ba44-46a8-a5a8-f32d091032ad}:{56D22BA6-8E67-4807-BFC9-42FF37FC774D}
+++头文件
+i:{7d0d9fc5-ba44-46a8-a5a8-f32d091032ad}:头文件
+++源文件
+i:{7d0d9fc5-ba44-46a8-a5a8-f32d091032ad}:源文件
+++test.c
+i:{7d0d9fc5-ba44-46a8-a5a8-f32d091032ad}:D:\比特就业课105期\C语言进阶\0411C进阶考试\0411C进阶考试\test.c
+++资源文件
+i:{7d0d9fc5-ba44-46a8-a5a8-f32d091032ad}:资源文件
+++concurrencysal.h
+e:{7d0d9fc5-ba44-46a8-a5a8-f32d091032ad}:C:\PROGRAM FILES\MICROSOFT VISUAL STUDIO\2022\COMMUNITY\VC\TOOLS\MSVC\14.30.30705\INCLUDE\CONCURRENCYSAL.H
+++corecrt.h
+e:{7d0d9fc5-ba44-46a8-a5a8-f32d091032ad}:C:\PROGRAM FILES (X86)\WINDOWS KITS\10\INCLUDE\10.0.19041.0\UCRT\CORECRT.H
+++corecrt_stdio_config.h
+e:{7d0d9fc5-ba44-46a8-a5a8-f32d091032ad}:C:\PROGRAM FILES (X86)\WINDOWS KITS\10\INCLUDE\10.0.19041.0\UCRT\CORECRT_STDIO_CONFIG.H
+++corecrt_wstdio.h
+e:{7d0d9fc5-ba44-46a8-a5a8-f32d091032ad}:C:\PROGRAM FILES (X86)\WINDOWS KITS\10\INCLUDE\10.0.19041.0\UCRT\CORECRT_WSTDIO.H
+++sal.h
+e:{7d0d9fc5-ba44-46a8-a5a8-f32d091032ad}:C:\PROGRAM FILES\MICROSOFT VISUAL STUDIO\2022\COMMUNITY\VC\TOOLS\MSVC\14.30.30705\INCLUDE\SAL.H
+++sourceannotations.h
+e:{7d0d9fc5-ba44-46a8-a5a8-f32d091032ad}:C:\PROGRAM FILES\MICROSOFT VISUAL STUDIO\2022\COMMUNITY\VC\TOOLS\MSVC\14.30.30705\INCLUDE\CODEANALYSIS\SOURCEANNOTATIONS.H
+++stdio.h
+e:{7d0d9fc5-ba44-46a8-a5a8-f32d091032ad}:C:\PROGRAM FILES (X86)\WINDOWS KITS\10\INCLUDE\10.0.19041.0\UCRT\STDIO.H
+++vadefs.h
+e:{7d0d9fc5-ba44-46a8-a5a8-f32d091032ad}:C:\PROGRAM FILES\MICROSOFT VISUAL STUDIO\2022\COMMUNITY\VC\TOOLS\MSVC\14.30.30705\INCLUDE\VADEFS.H
+++vcruntime.h
+e:{7d0d9fc5-ba44-46a8-a5a8-f32d091032ad}:C:\PROGRAM FILES\MICROSOFT VISUAL STUDIO\2022\COMMUNITY\VC\TOOLS\MSVC\14.30.30705\INCLUDE\VCRUNTIME.H
+++winapifamily.h
+e:{7d0d9fc5-ba44-46a8-a5a8-f32d091032ad}:C:\PROGRAM FILES (X86)\WINDOWS KITS\10\INCLUDE\10.0.19041.0\SHARED\WINAPIFAMILY.H
+++winpackagefamily.h
+e:{7d0d9fc5-ba44-46a8-a5a8-f32d091032ad}:C:\PROGRAM FILES (X86)\WINDOWS KITS\10\INCLUDE\10.0.19041.0\SHARED\WINPACKAGEFAMILY.H
+++corecrt_malloc.h
+e:{7d0d9fc5-ba44-46a8-a5a8-f32d091032ad}:C:\PROGRAM FILES (X86)\WINDOWS KITS\10\INCLUDE\10.0.19041.0\UCRT\CORECRT_MALLOC.H
+++corecrt_search.h
+e:{7d0d9fc5-ba44-46a8-a5a8-f32d091032ad}:C:\PROGRAM FILES (X86)\WINDOWS KITS\10\INCLUDE\10.0.19041.0\UCRT\CORECRT_SEARCH.H
+++corecrt_wstdlib.h
+e:{7d0d9fc5-ba44-46a8-a5a8-f32d091032ad}:C:\PROGRAM FILES (X86)\WINDOWS KITS\10\INCLUDE\10.0.19041.0\UCRT\CORECRT_WSTDLIB.H
+++stddef.h
+e:{7d0d9fc5-ba44-46a8-a5a8-f32d091032ad}:C:\PROGRAM FILES (X86)\WINDOWS KITS\10\INCLUDE\10.0.19041.0\UCRT\STDDEF.H
+++stdlib.h
+e:{7d0d9fc5-ba44-46a8-a5a8-f32d091032ad}:C:\PROGRAM FILES (X86)\WINDOWS KITS\10\INCLUDE\10.0.19041.0\UCRT\STDLIB.H
+++limits.h
+e:{7d0d9fc5-ba44-46a8-a5a8-f32d091032ad}:C:\PROGRAM FILES\MICROSOFT VISUAL STUDIO\2022\COMMUNITY\VC\TOOLS\MSVC\14.30.30705\INCLUDE\LIMITS.H
+++corecrt_math.h
+++corecrt_math_defines.h
+++corecrt_memcpy_s.h
+e:{7d0d9fc5-ba44-46a8-a5a8-f32d091032ad}:C:\PROGRAM FILES (X86)\WINDOWS KITS\10\INCLUDE\10.0.19041.0\UCRT\CORECRT_MEMCPY_S.H
+++corecrt_memory.h
+e:{7d0d9fc5-ba44-46a8-a5a8-f32d091032ad}:C:\PROGRAM FILES (X86)\WINDOWS KITS\10\INCLUDE\10.0.19041.0\UCRT\CORECRT_MEMORY.H
+++corecrt_share.h
+++corecrt_terminate.h
+++corecrt_wconio.h
+++corecrt_wctype.h
+++corecrt_wdirect.h
+++corecrt_wio.h
+++corecrt_wprocess.h
+++corecrt_wstring.h
+e:{7d0d9fc5-ba44-46a8-a5a8-f32d091032ad}:C:\PROGRAM FILES (X86)\WINDOWS KITS\10\INCLUDE\10.0.19041.0\UCRT\CORECRT_WSTRING.H
+++corecrt_wtime.h
+++crtdbg.h
+++ctype.h
+++errno.h
+e:{7d0d9fc5-ba44-46a8-a5a8-f32d091032ad}:C:\PROGRAM FILES (X86)\WINDOWS KITS\10\INCLUDE\10.0.19041.0\UCRT\ERRNO.H
+++float.h
+++locale.h
+++malloc.h
+++math.h
+++share.h
+++string.h
+e:{7d0d9fc5-ba44-46a8-a5a8-f32d091032ad}:C:\PROGRAM FILES (X86)\WINDOWS KITS\10\INCLUDE\10.0.19041.0\UCRT\STRING.H
+++stat.h
+++types.h
+++time.h
+++wchar.h
+++ammintrin.h
+++arm64intr.h
+++arm64_neon.h
+++armintr.h
+++arm_neon.h
+++atomic
+++bit
+++cctype
+++cerrno
+++cfloat
+++climits
+++clocale
+++cmath
+++compare
+++concepts
+++crtdefs.h
+++cstddef
+++cstdint
+++cstdio
+++cstdlib
+++cstring
+++ctime
+++cwchar
+++eh.h
+++emmintrin.h
+++exception
+++immintrin.h
+++initializer_list
+++intrin.h
+++intrin0.h
+++intrin0.inl.h
+++ios
+++iosfwd
+++iostream
+++isa_availability.h
+++istream
+++iterator
+++limits
+++memory
+++mm3dnow.h
+++mmintrin.h
+++new
+++nmmintrin.h
+++ostream
+++pmmintrin.h
+++setjmp.h
+++setjmpex.h
+++smmintrin.h
+++stdexcept
+++stdint.h
+++streambuf
+++system_error
+++tmmintrin.h
+++tuple
+++typeinfo
+++type_traits
+++use_ansi.h
+++utility
+++vcruntime_exception.h
+++vcruntime_new.h
+++vcruntime_new_debug.h
+++vcruntime_string.h
+e:{7d0d9fc5-ba44-46a8-a5a8-f32d091032ad}:C:\PROGRAM FILES\MICROSOFT VISUAL STUDIO\2022\COMMUNITY\VC\TOOLS\MSVC\14.30.30705\INCLUDE\VCRUNTIME_STRING.H
+++vcruntime_typeinfo.h
+++wmmintrin.h
+++xatomic.h
+++xatomic_wait.h
+++xcall_once.h
+++xerrc.h
+++xfacet
+++xiosbase
+++xkeycheck.h
+++xlocale
+++xlocinfo
+++xlocnum
+++xmemory
+++xmmintrin.h
+++xpolymorphic_allocator.h
+++xstddef
+++xstring
+++xthreads.h
+++xtimec.h
+++xtr1common
+++xutility
+++yvals.h
+++yvals_core.h
+++zmmintrin.h
+++__msvc_system_error_abi.hpp
+++__msvc_xlocinfo_types.hpp
+++test.cpp

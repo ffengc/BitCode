@@ -1,0 +1,2 @@
+﻿test.obj : error LNK2019: 无法解析的外部符号 _Add，函数 _main 中引用了该符号
+D:\比特就业课105期\C语言进阶\0407预处理(1)\Debug\0407预处理(1).exe : fatal error LNK1120: 1 个无法解析的外部命令

@@ -1,0 +1,4 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(510,5): warning MSB8028: 中间目录(Debug\)包含从另一个项目(动态内存管理.vcxproj)共享的文件。   这会导致错误的清除和重新生成行为。
+  test.c
+D:\比特就业课105期\C语言进阶\动态内存管理\动态内存管理\test.c(270,8): warning C4013: “strcpy”未定义；假设外部返回 int
+  动态内存管理.vcxproj -> D:\比特就业课105期\C语言进阶\动态内存管理\Debug\0328动态内存管理.exe

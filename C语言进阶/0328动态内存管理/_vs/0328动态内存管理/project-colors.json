@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "eabfd803-8664-44dd-8f54-db127cc72917": {
+      "ProjectGuid": "eabfd803-8664-44dd-8f54-db127cc72917",
+      "DisplayName": "动态内存管理",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
