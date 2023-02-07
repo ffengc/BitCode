@@ -1,0 +1,7 @@
+hello perror: Success
+hello write 1
+hello write 2
+hello printf
+hello fprintf
+hello cout
+hello cerr
