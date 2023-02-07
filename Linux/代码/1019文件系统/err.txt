@@ -1,0 +1,3 @@
+hello perror: Success
+hello write 2
+hello cerr
