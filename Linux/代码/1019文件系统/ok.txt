@@ -1,0 +1,4 @@
+hello write 1
+hello printf
+hello fprintf
+hello cout
