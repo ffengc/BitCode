@@ -1,2 +1,5 @@
 # BitCode
-## the code is from bit
+
+2021-12 start to learn
+
+focus on C/C++,Linux OS,MySQL,DataStruct
