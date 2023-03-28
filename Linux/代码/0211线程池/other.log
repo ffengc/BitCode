@@ -1,0 +1,27 @@
+其他常见的锁
+    悲观锁:在每次取数据时，总是担心数据会被其他线程修改，
+        所以会在取数据前先加锁(读锁，写锁，行 锁等),
+        当其他线程想要访问数据时，被阻塞挂起。 
+    乐观锁:每次取数据时候，总是乐观的认为数据不会被其他线程修改，因此不上锁。
+        但是在更新数据前， 会判断其他数据在更新前有没有对数据进行修改。
+        主要采用两种方式:版本号机制和CAS操作。 
+    CAS操作:当需要更新数据时，判断当前内存值和之前取得的值是否相等。
+        如果相等则用新值更新。若不, 等则失败, 失败则重试, 一般是一个自旋的过程, 即不断重试。
+    自旋锁，公平锁，非公平锁?
+
+
+自选锁:
+    本质就是通过不断检测锁的状态, 来判断资源是否就绪的方案
+SYNOPSIS
+       #include <pthread.h>
+       int pthread_spin_destroy(pthread_spinlock_t *lock);
+       int pthread_spin_init(pthread_spinlock_t *lock, int pshared);
+       int pthread_spin_lock(pthread_spinlock_t *lock);
+       int pthread_spin_trylock(pthread_spinlock_t *lock);
+
+读者写者问题:
+    看课件
+    看看板书的读写锁的伪代码
+读者优先和写者优先的问题:
+    具体看看视频
+    库里面的这把锁默认是读者优先的
