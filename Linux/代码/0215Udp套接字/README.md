@@ -18,7 +18,7 @@
 
 首先在客户端向服务端传送message，服务端把message原封不动地发回给客户端。如果读者希望服务端对message进行进一步变换，可以直接对代码逻辑进行改进。
 
-
+![Image text](figures/img1.png)
 **图1**
 
 **运行方法：**
@@ -31,7 +31,7 @@
 
 #### Linux主机实现不同进程的“群聊”效果
 
-
+![Image text](figures/img2.png)
 **图2**
 
 **运行方法：**
@@ -72,12 +72,12 @@
 
 与本地环回测试类似，只需要服务端Linux主机 `make` 生成服务端和客户端后，将客户端发送给另一台主机，另一台主机就可以通过运行客户端完成通信（前提是服务端已经开始运行）。
 
-
+![Image text](figures/img3.png)
 **图3**
 
 #### Windows客户端与Linux服务端进行信息交互
 
-
+![Image text](figures/img4.png)
 **图4**
 
 **运行方式：**
