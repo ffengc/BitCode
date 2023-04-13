@@ -59,5 +59,6 @@ void logMessage(int level, const char *format, ...)
 
     // FILE* fp = fopen(LOGFILE, "a");
     fprintf(stdout, "%s%s\n", stdBuffer, logBuffer);
+    // 这里也可以设置，把日志信息重定向到文件上
     // fclose(fp);
 }
