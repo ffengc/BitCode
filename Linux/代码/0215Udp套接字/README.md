@@ -18,7 +18,6 @@
 
 首先在客户端向服务端传送message，服务端把message原封不动地发回给客户端。如果读者希望服务端对message进行进一步变换，可以直接对代码逻辑进行改进。
 
-![图1](/Users/demac/Library/Application Support/typora-user-images/image-20230413164403685.png)
 
 **图1**
 
@@ -32,7 +31,6 @@
 
 #### Linux主机实现不同进程的“群聊”效果
 
-![image-20230413165053104](/Users/demac/Library/Application Support/typora-user-images/image-20230413165053104.png)
 
 **图2**
 
@@ -74,13 +72,11 @@
 
 与本地环回测试类似，只需要服务端Linux主机 `make` 生成服务端和客户端后，将客户端发送给另一台主机，另一台主机就可以通过运行客户端完成通信（前提是服务端已经开始运行）。
 
-![image-20230413171114742](/Users/demac/Library/Application Support/typora-user-images/image-20230413171114742.png)
 
 **图3**
 
 #### Windows客户端与Linux服务端进行信息交互
 
-![image-20230413171454144](/Users/demac/Library/Application Support/typora-user-images/image-20230413171454144.png)
 
 **图4**
 
