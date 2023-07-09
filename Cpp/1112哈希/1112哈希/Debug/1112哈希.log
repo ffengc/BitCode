@@ -1,3 +1,0 @@
-﻿  test.cpp
-D:\比特就业课105期\C++\1112哈希\1112哈希\BloomFilter.h(109,13): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
-  1112哈希.vcxproj -> D:\比特就业课105期\C++\1112哈希\Debug\1112哈希.exe
