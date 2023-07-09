@@ -1,0 +1,13 @@
+﻿  test.cpp
+\\Mac\Home\我的文件\bit_class_105\C++\草稿\草稿\test.cpp(22,54): warning C4244: “参数”: 从“__int64”转换到“const unsigned int”，可能丢失数据
+\\Mac\Home\我的文件\bit_class_105\C++\草稿\草稿\test.cpp(28,37): warning C4018: “<=”: 有符号/无符号不匹配
+\\Mac\Home\我的文件\bit_class_105\C++\草稿\草稿\test.cpp(41,35): warning C4244: “参数”: 从“const _Ty”转换到“_Ty”，可能丢失数据
+          with
+          [
+              _Ty=__int64
+          ]
+          and
+          [
+              _Ty=int
+          ]
+  草稿.vcxproj -> \\Mac\Home\我的文件\bit_class_105\C++\草稿\Debug\草稿.exe

@@ -1,0 +1,198 @@
+﻿  test.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\numeric(521,20): error C2676: 二进制“!=”:“_FwdIt”不定义该运算符或到预定义运算符可接收的类型的转换
+          with
+          [
+              _FwdIt=std::ostream_iterator<int,char,std::char_traits<char>>
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\memory(3533,17): message : 可能是“bool std::operator !=(std::nullptr_t,const std::unique_ptr<_Ty,_Dx> &) noexcept”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\numeric(521,12): message : “bool std::operator !=(std::nullptr_t,const std::unique_ptr<_Ty,_Dx> &) noexcept”: 无法从“const _FwdIt”推导出“const std::unique_ptr<_Ty,_Dx> &”的 模板 参数
+          with
+          [
+              _FwdIt=std::ostream_iterator<int,char,std::char_traits<char>>
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\memory(3528,17): message : 或    “bool std::operator !=(const std::unique_ptr<_Ty,_Dx> &,std::nullptr_t) noexcept”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\numeric(521,12): message : “bool std::operator !=(const std::unique_ptr<_Ty,_Dx> &,std::nullptr_t) noexcept”: 无法从“_FwdIt”推导出“const std::unique_ptr<_Ty,_Dx> &”的 模板 参数
+          with
+          [
+              _FwdIt=std::ostream_iterator<int,char,std::char_traits<char>>
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\memory(3475,17): message : 或    “bool std::operator !=(const std::unique_ptr<_Ty,_Dx> &,const std::unique_ptr<_Ty2,_Dx2> &)”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\numeric(521,12): message : “bool std::operator !=(const std::unique_ptr<_Ty,_Dx> &,const std::unique_ptr<_Ty2,_Dx2> &)”: 无法从“_FwdIt”推导出“const std::unique_ptr<_Ty,_Dx> &”的 模板 参数
+          with
+          [
+              _FwdIt=std::ostream_iterator<int,char,std::char_traits<char>>
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\memory(1869,17): message : 或    “bool std::operator !=(std::nullptr_t,const std::shared_ptr<_Ty> &) noexcept”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\numeric(521,12): message : “bool std::operator !=(std::nullptr_t,const std::shared_ptr<_Ty> &) noexcept”: 无法从“const _FwdIt”推导出“const std::shared_ptr<_Ty> &”的 模板 参数
+          with
+          [
+              _FwdIt=std::ostream_iterator<int,char,std::char_traits<char>>
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\memory(1864,17): message : 或    “bool std::operator !=(const std::shared_ptr<_Ty> &,std::nullptr_t) noexcept”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\numeric(521,12): message : “bool std::operator !=(const std::shared_ptr<_Ty> &,std::nullptr_t) noexcept”: 无法从“_FwdIt”推导出“const std::shared_ptr<_Ty> &”的 模板 参数
+          with
+          [
+              _FwdIt=std::ostream_iterator<int,char,std::char_traits<char>>
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\memory(1822,17): message : 或    “bool std::operator !=(const std::shared_ptr<_Ty> &,const std::shared_ptr<_Ty0> &) noexcept”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\numeric(521,12): message : “bool std::operator !=(const std::shared_ptr<_Ty> &,const std::shared_ptr<_Ty0> &) noexcept”: 无法从“_FwdIt”推导出“const std::shared_ptr<_Ty> &”的 模板 参数
+          with
+          [
+              _FwdIt=std::ostream_iterator<int,char,std::char_traits<char>>
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(5225,17): message : 或    “bool std::operator !=(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem *const )”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\numeric(521,12): message : “bool std::operator !=(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem *const )”: 无法从“_FwdIt”推导出“const std::basic_string<_Elem,_Traits,_Alloc> &”的 模板 参数
+          with
+          [
+              _FwdIt=std::ostream_iterator<int,char,std::char_traits<char>>
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(5220,17): message : 或    “bool std::operator !=(const _Elem *const ,const std::basic_string<_Elem,_Traits,_Alloc> &)”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\numeric(521,12): message : “bool std::operator !=(const _Elem *const ,const std::basic_string<_Elem,_Traits,_Alloc> &)”: 无法从“_FwdIt”推导出“const _Elem *const ”的 模板 参数
+          with
+          [
+              _FwdIt=std::ostream_iterator<int,char,std::char_traits<char>>
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(5214,17): message : 或    “bool std::operator !=(const std::basic_string<_Elem,_Traits,_Alloc> &,const std::basic_string<_Elem,_Traits,_Alloc> &) noexcept”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\numeric(521,12): message : “bool std::operator !=(const std::basic_string<_Elem,_Traits,_Alloc> &,const std::basic_string<_Elem,_Traits,_Alloc> &) noexcept”: 无法从“_FwdIt”推导出“const std::basic_string<_Elem,_Traits,_Alloc> &”的 模板 参数
+          with
+          [
+              _FwdIt=std::ostream_iterator<int,char,std::char_traits<char>>
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xmemory(901,17): message : 或    “bool std::operator !=(const std::allocator<_Ty> &,const std::allocator<_Other> &) noexcept”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\numeric(521,12): message : “bool std::operator !=(const std::allocator<_Ty> &,const std::allocator<_Other> &) noexcept”: 无法从“_FwdIt”推导出“const std::allocator<_Ty> &”的 模板 参数
+          with
+          [
+              _FwdIt=std::ostream_iterator<int,char,std::char_traits<char>>
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\iterator(481,17): message : 或    “bool std::operator !=(const std::istreambuf_iterator<_Elem,_Traits> &,const std::istreambuf_iterator<_Elem,_Traits> &)”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\numeric(521,12): message : “bool std::operator !=(const std::istreambuf_iterator<_Elem,_Traits> &,const std::istreambuf_iterator<_Elem,_Traits> &)”: 无法从“_FwdIt”推导出“const std::istreambuf_iterator<_Elem,_Traits> &”的 模板 参数
+          with
+          [
+              _FwdIt=std::ostream_iterator<int,char,std::char_traits<char>>
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\iterator(299,17): message : 或    “bool std::operator !=(const std::istream_iterator<_Ty,_Elem,_Traits,_Diff> &,const std::istream_iterator<_Ty,_Elem,_Traits,_Diff> &) noexcept”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\numeric(521,12): message : “bool std::operator !=(const std::istream_iterator<_Ty,_Elem,_Traits,_Diff> &,const std::istream_iterator<_Ty,_Elem,_Traits,_Diff> &) noexcept”: 无法从“_FwdIt”推导出“const std::istream_iterator<_Ty,_Elem,_Traits,_Diff> &”的 模板 参数
+          with
+          [
+              _FwdIt=std::ostream_iterator<int,char,std::char_traits<char>>
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xutility(3591,30): message : 或    “bool std::operator !=(const std::move_iterator<_Iter> &,const std::move_iterator<_Iter2> &) noexcept(<expr>)”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\numeric(521,12): message : “bool std::operator !=(const std::move_iterator<_Iter> &,const std::move_iterator<_Iter2> &) noexcept(<expr>)”: 无法从“_FwdIt”推导出“const std::move_iterator<_Iter> &”的 模板 参数
+          with
+          [
+              _FwdIt=std::ostream_iterator<int,char,std::char_traits<char>>
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xutility(1409,5): message : 或    “bool std::operator !=(const std::reverse_iterator<_BidIt> &,const std::reverse_iterator<_BidIt2> &) noexcept(<expr>)”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\numeric(521,12): message : “bool std::operator !=(const std::reverse_iterator<_BidIt> &,const std::reverse_iterator<_BidIt2> &) noexcept(<expr>)”: 无法从“_FwdIt”推导出“const std::reverse_iterator<_BidIt> &”的 模板 参数
+          with
+          [
+              _FwdIt=std::ostream_iterator<int,char,std::char_traits<char>>
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\utility(381,27): message : 或    “bool std::operator !=(const std::pair<_Ty1,_Ty2> &,const std::pair<_Ty1,_Ty2> &)”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\numeric(521,12): message : “bool std::operator !=(const std::pair<_Ty1,_Ty2> &,const std::pair<_Ty1,_Ty2> &)”: 无法从“_FwdIt”推导出“const std::pair<_Ty1,_Ty2> &”的 模板 参数
+          with
+          [
+              _FwdIt=std::ostream_iterator<int,char,std::char_traits<char>>
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\utility(381,27): message : 或    “bool std::operator !=(const std::pair<_Ty1,_Ty2> &,const std::pair<_Ty1,_Ty2> &)”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\numeric(521,12): message : “bool std::operator !=(const std::pair<_Ty1,_Ty2> &,const std::pair<_Ty1,_Ty2> &)”: 无法从“_FwdIt”推导出“const std::pair<_Ty1,_Ty2> &”的 模板 参数
+          with
+          [
+              _FwdIt=std::ostream_iterator<int,char,std::char_traits<char>>
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xutility(1409,5): message : 或    “bool std::operator !=(const std::reverse_iterator<_BidIt> &,const std::reverse_iterator<_BidIt2> &) noexcept(<expr>)”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\numeric(521,12): message : “bool std::operator !=(const std::reverse_iterator<_BidIt> &,const std::reverse_iterator<_BidIt2> &) noexcept(<expr>)”: 无法从“_FwdIt”推导出“const std::reverse_iterator<_BidIt> &”的 模板 参数
+          with
+          [
+              _FwdIt=std::ostream_iterator<int,char,std::char_traits<char>>
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xutility(3591,30): message : 或    “bool std::operator !=(const std::move_iterator<_Iter> &,const std::move_iterator<_Iter2> &) noexcept(<expr>)”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\numeric(521,12): message : “bool std::operator !=(const std::move_iterator<_Iter> &,const std::move_iterator<_Iter2> &) noexcept(<expr>)”: 无法从“_FwdIt”推导出“const std::move_iterator<_Iter> &”的 模板 参数
+          with
+          [
+              _FwdIt=std::ostream_iterator<int,char,std::char_traits<char>>
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\iterator(299,17): message : 或    “bool std::operator !=(const std::istream_iterator<_Ty,_Elem,_Traits,_Diff> &,const std::istream_iterator<_Ty,_Elem,_Traits,_Diff> &) noexcept”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\numeric(521,12): message : “bool std::operator !=(const std::istream_iterator<_Ty,_Elem,_Traits,_Diff> &,const std::istream_iterator<_Ty,_Elem,_Traits,_Diff> &) noexcept”: 无法从“_FwdIt”推导出“const std::istream_iterator<_Ty,_Elem,_Traits,_Diff> &”的 模板 参数
+          with
+          [
+              _FwdIt=std::ostream_iterator<int,char,std::char_traits<char>>
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\iterator(481,17): message : 或    “bool std::operator !=(const std::istreambuf_iterator<_Elem,_Traits> &,const std::istreambuf_iterator<_Elem,_Traits> &)”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\numeric(521,12): message : “bool std::operator !=(const std::istreambuf_iterator<_Elem,_Traits> &,const std::istreambuf_iterator<_Elem,_Traits> &)”: 无法从“_FwdIt”推导出“const std::istreambuf_iterator<_Elem,_Traits> &”的 模板 参数
+          with
+          [
+              _FwdIt=std::ostream_iterator<int,char,std::char_traits<char>>
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xmemory(901,17): message : 或    “bool std::operator !=(const std::allocator<_Ty> &,const std::allocator<_Other> &) noexcept”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\numeric(521,12): message : “bool std::operator !=(const std::allocator<_Ty> &,const std::allocator<_Other> &) noexcept”: 无法从“_FwdIt”推导出“const std::allocator<_Ty> &”的 模板 参数
+          with
+          [
+              _FwdIt=std::ostream_iterator<int,char,std::char_traits<char>>
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(5214,17): message : 或    “bool std::operator !=(const std::basic_string<_Elem,_Traits,_Alloc> &,const std::basic_string<_Elem,_Traits,_Alloc> &) noexcept”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\numeric(521,12): message : “bool std::operator !=(const std::basic_string<_Elem,_Traits,_Alloc> &,const std::basic_string<_Elem,_Traits,_Alloc> &) noexcept”: 无法从“_FwdIt”推导出“const std::basic_string<_Elem,_Traits,_Alloc> &”的 模板 参数
+          with
+          [
+              _FwdIt=std::ostream_iterator<int,char,std::char_traits<char>>
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(5220,17): message : 或    “bool std::operator !=(const _Elem *const ,const std::basic_string<_Elem,_Traits,_Alloc> &)”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\numeric(521,12): message : “bool std::operator !=(const _Elem *const ,const std::basic_string<_Elem,_Traits,_Alloc> &)”: 无法从“_FwdIt”推导出“const _Elem *const ”的 模板 参数
+          with
+          [
+              _FwdIt=std::ostream_iterator<int,char,std::char_traits<char>>
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(5225,17): message : 或    “bool std::operator !=(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem *const )”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\numeric(521,12): message : “bool std::operator !=(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem *const )”: 无法从“_FwdIt”推导出“const std::basic_string<_Elem,_Traits,_Alloc> &”的 模板 参数
+          with
+          [
+              _FwdIt=std::ostream_iterator<int,char,std::char_traits<char>>
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\memory(1822,17): message : 或    “bool std::operator !=(const std::shared_ptr<_Ty> &,const std::shared_ptr<_Ty0> &) noexcept”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\numeric(521,12): message : “bool std::operator !=(const std::shared_ptr<_Ty> &,const std::shared_ptr<_Ty0> &) noexcept”: 无法从“_FwdIt”推导出“const std::shared_ptr<_Ty> &”的 模板 参数
+          with
+          [
+              _FwdIt=std::ostream_iterator<int,char,std::char_traits<char>>
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\memory(1864,17): message : 或    “bool std::operator !=(const std::shared_ptr<_Ty> &,std::nullptr_t) noexcept”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\numeric(521,12): message : “bool std::operator !=(const std::shared_ptr<_Ty> &,std::nullptr_t) noexcept”: 无法从“_FwdIt”推导出“const std::shared_ptr<_Ty> &”的 模板 参数
+          with
+          [
+              _FwdIt=std::ostream_iterator<int,char,std::char_traits<char>>
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\memory(1869,17): message : 或    “bool std::operator !=(std::nullptr_t,const std::shared_ptr<_Ty> &) noexcept”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\numeric(521,12): message : “bool std::operator !=(std::nullptr_t,const std::shared_ptr<_Ty> &) noexcept”: 无法从“const _FwdIt”推导出“const std::shared_ptr<_Ty> &”的 模板 参数
+          with
+          [
+              _FwdIt=std::ostream_iterator<int,char,std::char_traits<char>>
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\memory(3475,17): message : 或    “bool std::operator !=(const std::unique_ptr<_Ty,_Dx> &,const std::unique_ptr<_Ty2,_Dx2> &)”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\numeric(521,12): message : “bool std::operator !=(const std::unique_ptr<_Ty,_Dx> &,const std::unique_ptr<_Ty2,_Dx2> &)”: 无法从“_FwdIt”推导出“const std::unique_ptr<_Ty,_Dx> &”的 模板 参数
+          with
+          [
+              _FwdIt=std::ostream_iterator<int,char,std::char_traits<char>>
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\memory(3528,17): message : 或    “bool std::operator !=(const std::unique_ptr<_Ty,_Dx> &,std::nullptr_t) noexcept”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\numeric(521,12): message : “bool std::operator !=(const std::unique_ptr<_Ty,_Dx> &,std::nullptr_t) noexcept”: 无法从“_FwdIt”推导出“const std::unique_ptr<_Ty,_Dx> &”的 模板 参数
+          with
+          [
+              _FwdIt=std::ostream_iterator<int,char,std::char_traits<char>>
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\memory(3533,17): message : 或    “bool std::operator !=(std::nullptr_t,const std::unique_ptr<_Ty,_Dx> &) noexcept”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\numeric(521,12): message : “bool std::operator !=(std::nullptr_t,const std::unique_ptr<_Ty,_Dx> &) noexcept”: 无法从“const _FwdIt”推导出“const std::unique_ptr<_Ty,_Dx> &”的 模板 参数
+          with
+          [
+              _FwdIt=std::ostream_iterator<int,char,std::char_traits<char>>
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\vector(2299,17): message : 或    “bool std::operator !=(const std::vector<_Ty,_Alloc> &,const std::vector<_Ty,_Alloc> &)”
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\numeric(521,12): message : “bool std::operator !=(const std::vector<_Ty,_Alloc> &,const std::vector<_Ty,_Alloc> &)”: 无法从“_FwdIt”推导出“const std::vector<_Ty,_Alloc> &”的 模板 参数
+          with
+          [
+              _FwdIt=std::ostream_iterator<int,char,std::char_traits<char>>
+          ]
+D:\比特就业课105期\C++\stl_numeric\stl_numeric\test.cpp(86,77): message : 查看对正在编译的函数 模板 实例化“void std::iota<std::ostream_iterator<int,char,std::char_traits<char>>,int>(_FwdIt,_FwdIt,_Ty)”的引用
+          with
+          [
+              _FwdIt=std::ostream_iterator<int,char,std::char_traits<char>>,
+              _Ty=int
+          ]

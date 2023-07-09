@@ -1,0 +1,7 @@
+﻿  test.cpp
+D:\比特就业课105期\C++\stl_algorithm_3\stl_algorithm_3\test.cpp(107,16): warning C4244: “初始化”: 从“_Rep”转换到“unsigned int”，可能丢失数据
+          with
+          [
+              _Rep=std::chrono::system_clock::rep
+          ]
+  stl_algorithm_3.vcxproj -> D:\比特就业课105期\C++\stl_algorithm_3\Debug\stl_algorithm_3.exe

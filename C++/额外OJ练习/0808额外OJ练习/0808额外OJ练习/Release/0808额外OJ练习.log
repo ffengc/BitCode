@@ -1,0 +1,12 @@
+﻿  test.cpp
+D:\比特就业课105期\C++\额外OJ练习\0808额外OJ练习\0808额外OJ练习\test.cpp(94,21): warning C4018: “<”: 有符号/无符号不匹配
+D:\比特就业课105期\C++\额外OJ练习\0808额外OJ练习\0808额外OJ练习\test.cpp(106,29): warning C4018: “<”: 有符号/无符号不匹配
+D:\比特就业课105期\C++\额外OJ练习\0808额外OJ练习\0808额外OJ练习\test.cpp(127,27): warning C4018: “<”: 有符号/无符号不匹配
+D:\比特就业课105期\C++\额外OJ练习\0808额外OJ练习\0808额外OJ练习\test.cpp(136,31): warning C4018: “<”: 有符号/无符号不匹配
+D:\比特就业课105期\C++\额外OJ练习\0808额外OJ练习\0808额外OJ练习\test.cpp(150,27): warning C4018: “<”: 有符号/无符号不匹配
+  正在生成代码
+  73 of 117 functions (62.4%) were compiled, the rest were copied from previous compilation.
+    21 functions were new in current compilation
+    9 functions had inline decision re-evaluated but remain unchanged
+  已完成代码的生成
+  0808额外OJ练习.vcxproj -> D:\比特就业课105期\C++\额外OJ练习\0808额外OJ练习\Release\0808额外OJ练习.exe

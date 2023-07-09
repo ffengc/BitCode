@@ -1,0 +1,5 @@
+﻿  test.cpp
+D:\比特就业课105期\C++\0813_vector\0813_vector\test.cpp(33,21): warning C4018: “<”: 有符号/无符号不匹配
+D:\比特就业课105期\C++\0813_vector\0813_vector\test.cpp(115,16): warning C4101: “gt”: 未引用的局部变量
+D:\比特就业课105期\C++\0813_vector\0813_vector\test.cpp(114,12): warning C4101: “ls”: 未引用的局部变量
+  0813_vector.vcxproj -> D:\比特就业课105期\C++\0813_vector\Debug\0813_vector.exe

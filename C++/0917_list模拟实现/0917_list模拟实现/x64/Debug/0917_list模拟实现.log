@@ -1,0 +1,25 @@
+﻿  test.cpp
+D:\比特就业课105期\C++\0917_list模拟实现\0917_list模拟实现\MyList.h(125,37): error C2662: “yufc::__list__iterator<T,T &,T *> yufc::list<T>::begin(void)”: 不能将“this”指针从“const yufc::list<int>”转换为“yufc::list<int> &”
+          with
+          [
+              T=int
+          ]
+D:\比特就业课105期\C++\0917_list模拟实现\0917_list模拟实现\MyList.h(125,28): message : 转换丢失限定符
+D:\比特就业课105期\C++\0917_list模拟实现\0917_list模拟实现\MyList.h(71,12): message : 参见“yufc::list<int>::begin”的声明
+D:\比特就业课105期\C++\0917_list模拟实现\0917_list模拟实现\MyList.h(125,26): error C2512: “yufc::__list__iterator<T,T &,T *>”: 没有合适的默认构造函数可用
+          with
+          [
+              T=int
+          ]
+D:\比特就业课105期\C++\0917_list模拟实现\0917_list模拟实现\MyList.h(69,11): message : 参见“yufc::__list__iterator<T,T &,T *>”的声明
+          with
+          [
+              T=int
+          ]
+D:\比特就业课105期\C++\0917_list模拟实现\0917_list模拟实现\MyList.h(126,23): error C2662: “yufc::__list__iterator<T,T &,T *> yufc::list<T>::end(void)”: 不能将“this”指针从“const yufc::list<int>”转换为“yufc::list<int> &”
+          with
+          [
+              T=int
+          ]
+D:\比特就业课105期\C++\0917_list模拟实现\0917_list模拟实现\MyList.h(126,16): message : 转换丢失限定符
+D:\比特就业课105期\C++\0917_list模拟实现\0917_list模拟实现\MyList.h(74,12): message : 参见“yufc::list<int>::end”的声明

@@ -1,0 +1,3 @@
+﻿  test.cpp
+D:\比特就业课105期\C++\1029_AVL\1029_AVL\AVL.h(281,12): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+  1029_AVL.vcxproj -> D:\比特就业课105期\C++\1029_AVL\Debug\1029_AVL.exe

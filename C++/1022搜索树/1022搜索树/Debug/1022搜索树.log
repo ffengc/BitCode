@@ -1,0 +1,4 @@
+﻿  test.cpp
+D:\比特就业课105期\C++\1022搜索树\1022搜索树\BinarySearchTree.h(83): warning C4715: “BinarySearchTree<int>::insert”: 不是所有的控件路径都返回值
+D:\比特就业课105期\C++\1022搜索树\1022搜索树\key_keyValue.h(171): warning C4715: “key_value::BinarySearchTree<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> > >::insert”: 不是所有的控件路径都返回值
+  1022搜索树.vcxproj -> D:\比特就业课105期\C++\1022搜索树\Debug\1022搜索树.exe

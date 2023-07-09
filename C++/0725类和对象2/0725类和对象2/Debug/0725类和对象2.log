@@ -1,0 +1,4 @@
+﻿  test.cpp
+D:\比特就业课105期\C++\0725类和对象2\0725类和对象2\test.cpp(42,13): error C2662: “void Date::Display(void)”: 不能将“this”指针从“const Date”转换为“Date &”
+D:\比特就业课105期\C++\0725类和对象2\0725类和对象2\test.cpp(42,2): message : 转换丢失限定符
+D:\比特就业课105期\C++\0725类和对象2\0725类和对象2\test.cpp(17,7): message : 参见“Date::Display”的声明

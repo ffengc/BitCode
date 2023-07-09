@@ -1,0 +1,8 @@
+﻿  test.cpp
+D:\比特就业课105期\C++\草稿\草稿\test.cpp(23,20): warning C4018: “<”: 有符号/无符号不匹配
+D:\比特就业课105期\C++\草稿\草稿\test.cpp(68,7): warning C4101: “a”: 未引用的局部变量
+  正在生成代码
+  Previous IPDB and IOBJ mismatch, fall back to full compilation.
+  All 145 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成代码的生成
+  草稿.vcxproj -> D:\比特就业课105期\C++\草稿\Release\草稿.exe

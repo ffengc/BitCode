@@ -1,0 +1,5 @@
+﻿  test.cpp
+D:\比特就业课105期\C++\0717类和对象\0717类和对象\test.cpp(366): error C2280: “MyQueue::MyQueue(void)”: 尝试引用已删除的函数
+D:\比特就业课105期\C++\0717类和对象\0717类和对象\test.cpp(364): message : 编译器已在此处生成“MyQueue::MyQueue”
+D:\比特就业课105期\C++\0717类和对象\0717类和对象\test.cpp(364,1): message : “MyQueue::MyQueue(void)”: 由于 数据成员“MyQueue::_st2”不具备相应的 默认构造函数 或重载解决不明确，因此已隐式删除函数
+D:\比特就业课105期\C++\0717类和对象\0717类和对象\test.cpp(363): message : 参见“MyQueue::_st2”的声明

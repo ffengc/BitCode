@@ -1,0 +1,8 @@
+﻿  test.cpp
+D:\比特就业课105期\C++\0917_list\0917_list\test.cpp(131,12): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+  正在生成代码
+  0 of 159 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  已完成代码的生成
+  0917_list.vcxproj -> D:\比特就业课105期\C++\0917_list\Release\0917_list.exe

@@ -1,0 +1,5 @@
+﻿  f.cpp
+  test.cpp
+  正在生成代码...
+test.obj : error LNK2019: 无法解析的外部符号 "public: void __thiscall Queue::Init(void)" (?Init@Queue@@QAEXXZ)，函数 _main 中引用了该符号
+D:\比特就业课105期\C++\0716类和对象\Debug\0716类和对象.exe : fatal error LNK1120: 1 个无法解析的外部命令

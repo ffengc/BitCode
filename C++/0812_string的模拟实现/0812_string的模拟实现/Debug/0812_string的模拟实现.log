@@ -1,0 +1,5 @@
+﻿  test.cpp
+D:\比特就业课105期\C++\0812_string的模拟实现\0812_string的模拟实现\test.cpp(11,21): warning C4018: “<”: 有符号/无符号不匹配
+D:\比特就业课105期\C++\0812_string的模拟实现\0812_string的模拟实现\test.cpp(15,21): warning C4018: “<”: 有符号/无符号不匹配
+D:\比特就业课105期\C++\0812_string的模拟实现\0812_string的模拟实现\test.cpp(18,21): warning C4018: “<”: 有符号/无符号不匹配
+  0812_string的模拟实现.vcxproj -> D:\比特就业课105期\C++\0812_string的模拟实现\Debug\0812_string的模拟实现.exe
