@@ -1,0 +1,12 @@
+[NORMAL] [1682347181] create socket success, sock: 3
+[NORMAL] [1682347181] init TcpServer Success
+[NORMAL] [1682347189] create socket success, sock: 3
+[NORMAL] [1682347189] link success, serviceSock: 4 | 127.0.0.1 : -853585282
+[NORMAL] [1682347189] create new link success, sock: 4
+[NORMAL] [1682347197] client quit
+[NORMAL] [1682347312] create socket success, sock: 3
+[NORMAL] [1682347312] init TcpServer Success
+[NORMAL] [1682347322] create socket success, sock: 3
+[NORMAL] [1682347322] link success, serviceSock: 4 | 127.0.0.1 : 279484110
+[NORMAL] [1682347322] create new link success, sock: 4
+[NORMAL] [1682347830] client quit
